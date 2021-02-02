@@ -8,7 +8,11 @@
 </head>
 
 <body>
+
 <div class="container mt-4">
+    <?php
+    if ($_COOKIE['user'] == ''):
+    ?>
 <div class="row">
     <div class="col">
         <form action="validation-form/check.php" method="post">
@@ -44,5 +48,6 @@
     </div>
 </div>
 </div>
+<?php endif;?>
 </body>
 </html>

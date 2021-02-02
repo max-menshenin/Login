@@ -48,6 +48,8 @@
     </div>
 </div>
 </div>
+<?php else: ?>
+<p>for exit press here <?php $_COOKIE['user'] ?> <a href="exit.php"></a></p>
 <?php endif;?>
 </body>
 </html>

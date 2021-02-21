@@ -1,4 +1,5 @@
 <?php
+session_start();
 $login = filter_var(trim($_POST['login']),
     FILTER_SANITIZE_STRING);
 $pass = filter_var(trim($_POST['pass']),
@@ -16,6 +17,7 @@ if (count($user) == 0) {
     exit();
 }
 
+$_SESSION['user'] = $user['name'];
 setcookie('user',$user['name'], time() + 3600,'/Login');
 $mysql->close();
 header('Location: /Login');

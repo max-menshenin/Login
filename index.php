@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -11,7 +14,7 @@
 
 <div class="container mt-4">
     <?php
-    if ($_COOKIE['user'] == ''):
+    if ($_SESSION['user'] == ''):
     ?>
 <div class="row">
     <div class="col">

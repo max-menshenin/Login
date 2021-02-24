@@ -52,7 +52,7 @@ session_start();
     </div>
 </div>
 <?php else: ?>
-    <p>for exit press here <?$_COOKIE['user'] ?> <a href="exit.php"></a></p>
+    <p>for exit press here <?$_SESSION['user'] ;?> <a href="validation-form/exit.php">exit</a></p>
 <?php endif;?>
 </body>
 </html>

@@ -7,14 +7,15 @@ $pass = filter_var(trim($_POST['pass']),
 $pass = md5($pass."hydrochloride");
 
 $mysql = new mysqli('localhost','root','root','register-db' );
-echo mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 echo mysqli_error($mysql);
 $result = $mysql->query("SELECT * FROM `users` WHERE `login` = '$login' AND `pass` = '$pass'");
 $user = $result->fetch_assoc();
-
 print_r($user);
-
-
+if (count($user) == 0) {
+    echo "user not found";
+    exit();
+}
+echo mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 $_SESSION['user'] = $user['name'];
 $mysql->close();

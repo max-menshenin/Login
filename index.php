@@ -1,5 +1,6 @@
 <?php
 session_start();
+echo $_SESSION['user'];
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -52,7 +53,7 @@ session_start();
     </div>
 </div>
 <?php else: ?>
-    <p>for exit press here <?$_SESSION['user'] ;?> <a href="validation-form/exit.php">exit</a></p>
+    <p>for exit press here <? $_SESSION['user'] ?> <a href="validation-form/exit.php">EXIT</a></p>
 <?php endif;?>
 </body>
 </html>

@@ -1,6 +1,8 @@
 <?php
 session_start();
 echo $_SESSION['user'];
+$error_arr = array('');
+echo $error_arr;
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -10,9 +12,7 @@ echo $_SESSION['user'];
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
 <div class="container mt-4">
     <?php
     if ($_SESSION['user'] == ''):

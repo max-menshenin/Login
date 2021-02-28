@@ -1,5 +1,7 @@
 <?php
 session_start();
+var_dump($error_arr);
+
 $login = filter_var(trim($_POST['login']),
     FILTER_SANITIZE_STRING);
 $pass = filter_var(trim($_POST['pass']),

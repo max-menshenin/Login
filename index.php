@@ -3,7 +3,6 @@ session_start();
 echo $_SESSION['user'];
 $error_arr = array('');
 $error_arr[] = 'test';
-
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 $login = filter_var(trim($_POST['login']),
     FILTER_SANITIZE_STRING);
 $name = filter_var(trim($_POST['name']),

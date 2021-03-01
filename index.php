@@ -1,6 +1,8 @@
 <?php
 session_start();
-var_dump( $error_arr); ?>
+var_dump( $error_arr);
+$_SESSION['error_arr']
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -50,7 +52,8 @@ var_dump( $error_arr); ?>
     </div>
 </div>
 <?php else: ?>
-    <p>for exit press here <? $_SESSION['user'] ?> <a href="validation-form/exit.php">EXIT</a></p>
+    <p>for exit press here <? var_dump( $error_arr);
+        $_SESSION['user'] ?> <a href="validation-form/exit.php">EXIT</a></p>
 <?php endif;?>
 </body>
 </html>

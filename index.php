@@ -1,9 +1,6 @@
 <?php
 session_start();
-echo $_SESSION['user'];
-$error_arr = array('');
-$error_arr[] = 'test';
-?>
+var_dump( $error_arr); ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>

@@ -1,6 +1,5 @@
 <?php
 session_start();
-$error_arr[] = $_SESSION['error_arr'];
 $login = filter_var(trim($_POST['login']),
     FILTER_SANITIZE_STRING);
 $pass = filter_var(trim($_POST['pass']),
@@ -20,8 +19,8 @@ if (count($user) == 0) {
     header('Location: /Login');
 }
 
-$_SESSION['user'] = $user['login'];
+$_SESSION['user'] = $user['user'];
 var_dump($error_arr);
 $mysql->close();
 
-header('Location: /Login');
+//header('Location: /Login');

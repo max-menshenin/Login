@@ -1,6 +1,7 @@
 <?php
 session_start();
-$_SESSION['error_arr'] = array();
+
+$error_arr = $_SESSION['error_arr'];
 
 $login = filter_var(trim($_POST['login']),
     FILTER_SANITIZE_STRING);
@@ -18,10 +19,11 @@ print_r($user);
 if (count($user) == 0) {
     echo "user not found";
     $error_arr[] = "user not found";
-    header('Location: /Login');
+    //header('Location: /Login');
 }
 
-$_SESSION['user'] = $user['name'];
+$_SESSION['user'] = $user['error_arr'];
+var_dump($error_arr);
 $mysql->close();
 
 header('Location: /Login');

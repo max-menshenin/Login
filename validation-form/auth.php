@@ -20,7 +20,7 @@ if (count($user) == 0) {
     header('Location: /Login');
 }
 
-$_SESSION['user'] = $user['error_arr'];
+$_SESSION['user'] = $user['login'];
 var_dump($error_arr);
 $mysql->close();
 

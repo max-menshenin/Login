@@ -1,7 +1,7 @@
 <?php
 session_start();
-var_dump( $error_arr);
-$error_arr = $_SESSION['error_arr'];
+var_dump($error_arr);
+$_SESSION[$error_arr];
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

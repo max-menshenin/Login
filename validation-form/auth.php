@@ -14,12 +14,12 @@ $result = $mysql->query("SELECT * FROM `users` WHERE `login` = '$login' AND `pas
 $user = $result->fetch_assoc();
 print_r($user);
 if (count($user) == 0) {
-    echo "user not found";
     $error_arr[] = "user not found";
     header('Location: /Login');
 }
 
 $_SESSION['user'] = $user['user'];
+$_SESSION[$error_arr][] = 'test';
 var_dump($error_arr);
 $mysql->close();
 

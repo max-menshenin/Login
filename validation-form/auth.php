@@ -15,7 +15,7 @@ $user = $result->fetch_assoc();
 print_r($user);
 if (count($user) == 0) {
     $error_arr[] = "user not found";
-    header('Location: /Login');
+    //header('Location: /Login');
 }
 
 $_SESSION['user'] = $user['user'];
@@ -23,4 +23,4 @@ $_SESSION[$error_arr][] = 'test';
 var_dump($error_arr);
 $mysql->close();
 
-//header('Location: /Login');
+header('Location: /Login');

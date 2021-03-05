@@ -1,6 +1,6 @@
 <?php
 session_start();
-var_dump($_SESSION['$error_arr']);
+var_dump($_SESSION['user']);
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

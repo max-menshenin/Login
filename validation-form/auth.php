@@ -1,5 +1,8 @@
 <?php
 session_start();
+$error_arr = array();
+$error_arr[] = 'check';
+
 $login = filter_var(trim($_POST['login']),
     FILTER_SANITIZE_STRING);
 $pass = filter_var(trim($_POST['pass']),
@@ -19,8 +22,7 @@ if (count($user) == 0) {
 }
 
 $_SESSION['user'] = $user['user'];
-$_SESSION[$error_arr][] = 'test';
 var_dump($error_arr);
 $mysql->close();
 
-header('Location: /Login');
+//header('Location: /Login');

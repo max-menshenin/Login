@@ -1,6 +1,6 @@
 <?php
 session_start();
-print_r($_SESSION['error']);
+var_dump($_SESSION['error']);
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

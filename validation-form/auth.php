@@ -16,7 +16,7 @@ $result = $mysql->query("SELECT * FROM `users` WHERE `login` = '$login' AND `pas
 $user = $result->fetch_assoc();
 print_r($user);
 if (count($user) == 0) {
-    $error[] = "user not found";
+    $error[] = "please recheck input data not found";
     header('Location: /Login');
 }
 $_SESSION['error'] = $error;

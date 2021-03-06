@@ -14,14 +14,12 @@ echo mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 $result = $mysql->query("SELECT * FROM `users` WHERE `login` = '$login' AND `pass` = '$pass'");
 $user = $result->fetch_assoc();
-print_r($user);
 if (count($user) == 0) {
-    $error[] = "please recheck input data not found";
+    $error[] = "login or pass wrong";
     header('Location: /Login');
 }
 $_SESSION['error'] = $error;
 $_SESSION['user'] = $user;
-var_dump($error);
 $mysql->close();
 header('Location: /Login');
 

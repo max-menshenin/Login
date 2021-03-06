@@ -1,6 +1,6 @@
 <?php
 session_start();
-$error_arr = array();
+$error = array();
 
 $login = filter_var(trim($_POST['login']),
     FILTER_SANITIZE_STRING);
@@ -16,12 +16,12 @@ $result = $mysql->query("SELECT * FROM `users` WHERE `login` = '$login' AND `pas
 $user = $result->fetch_assoc();
 print_r($user);
 if (count($user) == 0) {
-    $error_arr[] = "user not found";
+    $error[] = "user not found";
     header('Location: /Login');
 }
-$_SESSION['error_arr'] = $error_arr;
-$_SESSION['user'] = $user['user'];
-var_dump($error_arr);
+$_SESSION['error'] = $error;
+$_SESSION['user'] = $user;
+var_dump($error);
 $mysql->close();
+header('Location: /Login');
 
-//header('Location: /Login');

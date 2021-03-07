@@ -1,7 +1,8 @@
 <?php
 session_start();
 if (!empty($_SESSION['error'] )) {
-    foreach ($_SESSION['error'] as $item ){
+    foreach ($_SESSION['error'] as $item )
+    {
         echo $item;
     }
 }

@@ -52,8 +52,8 @@ if (!empty($_SESSION['error'] )) {
     </div>
 </div>
 <?php else: ?>
-    <p>for exit press here <?
-        $_SESSION['user'] ?> <a href="validation-form/exit.php">EXIT</a></p>
+    <p>Привет. Для выхода нажми здесь  <?
+    $_SESSION['user']['login'] ?> <a href="validation-form/exit.php">Выход</a></p>
 <?php endif;?>
 </body>
 </html>

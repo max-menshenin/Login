@@ -27,10 +27,6 @@ if (!empty($_SESSION['error'] )) {
                 <input type="text" class="form-control" name="login" id="login"
                        placeholder="Enter login">
                 <br>
-                <input type="text" class="form-control" name="name" id="name"
-                       placeholder="Enter name">
-
-                <br>
                 <input type="password" class="password" name="pass" id="pass"
                        placeholder="Enter pass">
                 <br>

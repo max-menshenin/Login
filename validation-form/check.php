@@ -3,8 +3,6 @@ session_start();
 
 $login = filter_var(trim($_POST['login']),
     FILTER_SANITIZE_STRING);
-$name = filter_var(trim($_POST['name']),
-    FILTER_SANITIZE_STRING);
 $pass = filter_var(trim($_POST['pass']),
     FILTER_SANITIZE_STRING);
 
@@ -22,8 +20,8 @@ $mysqli = new mysqli('localhost', 'root','root','register-db' );
 //if ($mysqli->connect_error) {
 //  die('Connect Error (' . $mysqli->conn ect_errno . ') ' . $mysqli->connect_error;
 $pass = md5($pass."hydrochloride");
-$mysqli->query("INSERT INTO `users`(`login`,`pass`,`name`)
-VALUES ('$login','$pass','$name')");
+$mysqli->query("INSERT INTO `users`(`login`,`pass`)
+VALUES ('$login','$pass')");
 $mysqli->close();
 header('Location: /Login');
 exit();

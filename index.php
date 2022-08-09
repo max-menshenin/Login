@@ -1,59 +1,20 @@
 <?php
 session_start();
-if (!empty($_SESSION['error'] )) {
-    foreach ($_SESSION['error'] as $item )
-    {
-        echo $item;
-    }
-}
 ?>
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Auth form</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body>
-<div class="container mt-4">
-    <?php
-    if ($_SESSION['user'] == ''):
-    ?>
-    <div class="row">
-        <div class="col">
-            <form action="validation-form/check.php" method="post">
-                <h1>Registration form</h1>
-                <input type="text" class="form-control" name="login" id="login"
-                       placeholder="Enter login">
-                <br>
-                <input type="password" class="password" name="pass" id="pass"
-                       placeholder="Enter pass">
-                <br>
-                <button class="btn btn-success" type="submit">Submit</button>
-                <br>
-            </form>
-        </div>
-        <div class="row">
-            <div class="col">
-                <form action="validation-form/auth.php" method="post">
-                    <h1>Auth form</h1>
-                    <input type="text" class="form-control" name="login" id="login"
-                           placeholder="Enter login">
-                    <br>
-                    <input type="password" class="password" name="pass" id="pass"
-                           placeholder="Enter pass">
-                    <br>
-                    <button class="btn btn-success" type="submit">Auth</button>
-                    <br>
-                </form>
-            </div>
-        </div>
-    </div>
+<div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 class="display-4 font-weight-normal">Заголовок</h1>
+    <p class="lead font-weight-normal">И еще более остроумный подзаголовок. Начните свои маркетинговые усилия с этого примера, основанного на маркетинговых страницах Apple.</p>
+    <a class="btn btn-outline-secondary" href="#">Скоро в продаже</a>
 </div>
-<?php else: ?>
-    <p>Привет. Для выхода нажми здесь  <?
-    $_SESSION['user']['login'] ?> <a href="validation-form/exit.php">Выход</a></p>
-<?php endif;?>
 </body>
 </html>

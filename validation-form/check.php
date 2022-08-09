@@ -7,8 +7,7 @@ $pass = filter_var(trim($_POST['pass']),
     FILTER_SANITIZE_STRING);
 
 if (mb_strlen($login) < 5 || mb_strlen($login) > 90)
-{
-    echo "error login must be more than 5 and less than 90";
+{"error login must be more than 5 and less than 90";
     exit();
 }
 else if (mb_strlen($pass) < 2 || mb_strlen($pass) > 6)
